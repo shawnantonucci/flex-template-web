@@ -12,7 +12,13 @@ const KeywordInput = props => {
   return (
     <fieldset className={className}>
       {filterText}
-      <FieldTextInput id={id} name={name} type="text" placeholder={placeholder} />
+      <FieldTextInput
+        id={id}
+        name={name}
+        type="text"
+        placeholder={placeholder}
+        className={className}
+      />
     </fieldset>
   );
 };
@@ -116,7 +122,7 @@ class KeywordFilter extends Component {
         <KeywordInput
           className={css.fieldGroup}
           name={name}
-          id={`${id}-checkbox-group`}
+          id={`${id}-input`}
           options={options}
           filterText={filterText}
           placeholder={placeholder}
@@ -139,7 +145,7 @@ class KeywordFilter extends Component {
         <KeywordInput
           className={css.fieldGroupPlain}
           name={name}
-          id={`${id}-checkbox-group`}
+          id={`${id}-input`}
           options={options}
         />
       </FilterPlain>

@@ -45,7 +45,7 @@
 .fieldGroup {
   @apply --marketplaceH4FontStyles;
   margin: 0;
-  padding: 0;
+  padding: 1px 0 11px 0;
   border: none;
 }
 
