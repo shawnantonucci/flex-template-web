@@ -146,7 +146,8 @@ class KeywordFilter extends Component {
           className={css.fieldGroupPlain}
           name={name}
           id={`${id}-input`}
-          options={options}
+          filterText={filterText}
+          placeholder={placeholder}
         />
       </FilterPlain>
     );

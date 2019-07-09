@@ -11,6 +11,7 @@ import { createResourceLocatorString } from '../../util/routes';
 import {
   ModalInMobile,
   Button,
+  KeywordFilter,
   PriceFilter,
   SelectSingleFilter,
   SelectMultipleFilter,
@@ -34,6 +35,7 @@ class SearchFiltersMobileComponent extends Component {
     this.handleSelectMultiple = this.handleSelectMultiple.bind(this);
     this.handlePrice = this.handlePrice.bind(this);
     this.handleDateRange = this.handleDateRange.bind(this);
+    this.handleKeyword = this.handleKeyword.bind(this);
     this.initialValue = this.initialValue.bind(this);
     this.initialValues = this.initialValues.bind(this);
     this.initialPriceRangeValue = this.initialPriceRangeValue.bind(this);
@@ -118,6 +120,15 @@ class SearchFiltersMobileComponent extends Component {
     history.push(createResourceLocatorString('SearchPage', routeConfiguration(), {}, queryParams));
   }
 
+  handleKeyword(urlParam, keywords) {
+    const { urlQueryParams, history } = this.props;
+    const queryParams = urlParam
+      ? { ...urlQueryParams, [urlParam]: keywords }
+      : omit(urlQueryParams, urlParam);
+
+    history.push(createResourceLocatorString('SearchPage', routeConfiguration(), {}, queryParams));
+  }
+
   // Reset all filter query parameters
   resetAll(e) {
     const { urlQueryParams, history, filterParamNames } = this.props;
@@ -185,6 +196,7 @@ class SearchFiltersMobileComponent extends Component {
       amenitiesFilter,
       priceFilter,
       dateRangeFilter,
+      keywordFilter,
       intl,
     } = this.props;
 
@@ -267,6 +279,24 @@ class SearchFiltersMobileComponent extends Component {
         />
       ) : null;
 
+    const initialKeyword = this.initialValue(keywordFilter.paramName);
+    const keywordLabel = intl.formatMessage({
+      id: 'SearchFilters.keywordLabel',
+    });
+    const keywordFilterElement =
+      keywordFilter && keywordFilter.config.active ? (
+        <KeywordFilter
+          id={'SearchFilters.keywordFilter'}
+          name="keyword"
+          urlParam={keywordFilter.paramName}
+          label={keywordLabel}
+          onSubmit={this.handleKeyword}
+          liveEdit
+          showAsPopup={false}
+          initialValues={initialKeyword}
+        />
+      ) : null;
+
     return (
       <div className={classes}>
         <div className={css.searchResultSummary}>
@@ -303,6 +333,7 @@ class SearchFiltersMobileComponent extends Component {
               {amenitiesFilterElement}
               {priceFilterElement}
               {dateRangeFilterElement}
+              {keywordFilterElement}
             </div>
           ) : null}
 
