@@ -1,6 +1,7 @@
 import React from 'react';
 import { bool, func, node, object } from 'prop-types';
 import classNames from 'classnames';
+import debounce from 'lodash/debounce';
 import { Form as FinalForm, FormSpy } from 'react-final-form';
 import arrayMutators from 'final-form-arrays';
 import { injectIntl, intlShape } from 'react-intl';
@@ -8,8 +9,10 @@ import { injectIntl, intlShape } from 'react-intl';
 import { Form } from '../../components';
 import css from './FilterForm.css';
 
+const DEBOUNCE_WAIT_TIME = 600;
+
 const FilterFormComponent = props => {
-  const { liveEdit, onChange, onSubmit, onCancel, onClear, ...rest } = props;
+  const { liveEdit, useDebounce, onChange, onSubmit, onCancel, onClear, ...rest } = props;
 
   if (liveEdit && !onChange) {
     throw new Error('FilterForm: if liveEdit is true you need to provide onChange function');
@@ -26,6 +29,16 @@ const FilterFormComponent = props => {
       onChange(formState.values);
     }
   };
+
+  const handleChangeWithDebounce = debounce(
+    formState => {
+      if (formState.dirty) {
+        onChange(formState.values);
+      }
+    },
+    DEBOUNCE_WAIT_TIME,
+    { leading: false, trailing: true }
+  );
 
   const formCallbacks = liveEdit ? { onSubmit: () => null } : { onSubmit, onCancel, onClear };
   return (
@@ -68,7 +81,12 @@ const FilterFormComponent = props => {
           >
             <div className={classNames(paddingClasses || css.contentWrapper)}>{children}</div>
 
-            {liveEdit ? (
+            {useDebounce && liveEdit ? (
+              <FormSpy
+                onChange={handleChangeWithDebounce}
+                subscription={{ values: true, dirty: true }}
+              />
+            ) : liveEdit ? (
               <FormSpy onChange={handleChange} subscription={{ values: true, dirty: true }} />
             ) : (
               <div className={css.buttonsWrapper}>

@@ -43,6 +43,7 @@ class FilterPlainComponent extends Component {
       id,
       label,
       isSelected,
+      useDebounce,
       children,
       initialValues,
       keepDirtyOnReinitialize,
@@ -72,6 +73,7 @@ class FilterPlainComponent extends Component {
           <FilterForm
             id={`${id}.form`}
             liveEdit
+            useDebounce={useDebounce}
             contentPlacementOffset={contentPlacementOffset}
             onChange={this.handleChange}
             initialValues={initialValues}

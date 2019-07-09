@@ -136,6 +136,7 @@ class KeywordFilter extends Component {
         isSelected={hasInitialValues}
         id={`${id}.plain`}
         liveEdit
+        useDebounce
         contentPlacementOffset={contentStyle}
         onSubmit={handleSubmit}
         initialValues={namedInitialValues}
