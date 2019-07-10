@@ -15,6 +15,7 @@ import {
   PasswordRecoveryPage,
   PasswordResetPage,
   PayoutPreferencesPage,
+  PaymentSettingsPage,
   PrivacyPolicyPage,
   ProfilePage,
   ProfileSettingsPage,
@@ -248,6 +249,13 @@ const routeConfiguration = () => {
       authPage: 'LoginPage',
       component: props => <PayoutPreferencesPage {...props} />,
       loadData: PayoutPreferencesPage.loadData,
+    },
+    {
+      path: '/account/payment-settings',
+      name: 'PaymentSettingsPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: props => <PaymentSettingsPage {...props} />,
     },
     {
       path: '/terms-of-service',
