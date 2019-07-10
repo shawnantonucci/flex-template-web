@@ -3,6 +3,7 @@ import { bool } from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
+import { ensureCurrentUser } from '../../util/data';
 import { propTypes } from '../../util/types';
 import { isScrollingDisabled } from '../../ducks/UI.duck';
 import {
@@ -16,11 +17,12 @@ import {
   UserNav,
 } from '../../components';
 import { TopbarContainer } from '../../containers';
+import { PaymentSettingsForm } from '../../forms';
 
 import css from './PaymentSettingsPage.css';
 
 export const PaymentSettingsPageComponent = props => {
-  const { scrollingDisabled, intl } = props;
+  const { currentUser, scrollingDisabled, intl } = props;
 
   const tabs = [
     {
@@ -55,6 +57,18 @@ export const PaymentSettingsPageComponent = props => {
 
   const title = intl.formatMessage({ id: 'PaymentSettingsPage.title' });
 
+  const ensuredCurrentUser = ensureCurrentUser(currentUser);
+  const currentUserLoaded = !!ensuredCurrentUser.id;
+
+  // Get first and last name of the current user and use it in the StripePaymentForm to autofill the name field
+  const userName = currentUserLoaded
+    ? `${ensuredCurrentUser.attributes.profile.firstName} ${
+        ensuredCurrentUser.attributes.profile.lastName
+      }`
+    : null;
+
+  const initalValuesForStripePayment = { name: userName };
+
   return (
     <Page title={title} scrollingDisabled={scrollingDisabled}>
       <LayoutSideNavigation>
@@ -72,7 +86,12 @@ export const PaymentSettingsPageComponent = props => {
             <h1 className={css.title}>
               <FormattedMessage id="PaymentSettingsPage.heading" />
             </h1>
-            <p>TODO</p>
+            <PaymentSettingsForm
+              className={css.paymentForm}
+              formId="PaymentSettingsForm"
+              initialValues={initalValuesForStripePayment}
+              onSubmit={() => null} //TODO
+            />
           </div>
         </LayoutWrapperMain>
         <LayoutWrapperFooter>
