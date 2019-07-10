@@ -58,6 +58,16 @@ exports[`ContactDetailsPage matches snapshot 1`] = `
               values={Object {}}
             />,
           },
+          Object {
+            "linkProps": Object {
+              "name": "PaymentSettingsPage",
+            },
+            "selected": false,
+            "text": <FormattedMessage
+              id="ContactDetailsPage.paymentSettingsTabTitle"
+              values={Object {}}
+            />,
+          },
         ]
       }
     />
