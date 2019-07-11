@@ -9,7 +9,7 @@ import { injectIntl, intlShape } from 'react-intl';
 import { Form } from '../../components';
 import css from './FilterForm.css';
 
-const DEBOUNCE_WAIT_TIME = 600;
+const DEBOUNCE_WAIT_TIME = 400;
 
 const FilterFormComponent = props => {
   const { liveEdit, useDebounce, onChange, onSubmit, onCancel, onClear, ...rest } = props;
