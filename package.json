@@ -49,6 +49,8 @@
     "redux-thunk": "^2.3.0",
     "sanitize.css": "^5.0.0",
     "seedrandom": "^2.4.4",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.0",
     "sharetribe-flex-sdk": "^1.4.1",
     "sharetribe-scripts": "3.0.0",
     "smoothscroll-polyfill": "^0.4.0",

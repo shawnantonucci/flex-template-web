@@ -134,16 +134,20 @@ const TopbarDesktop = props => {
           alt={intl.formatMessage({ id: 'TopbarDesktop.logo' })}
         />
       </NamedLink>
-      {search}
-      <NamedLink className={css.createListingLink} name="NewListingPage">
-        <span className={css.createListing}>
-          <FormattedMessage id="TopbarDesktop.createListing" />
-        </span>
-      </NamedLink>
-      {inboxLink}
-      {profileMenu}
-      {signupLink}
-      {loginLink}
+      <div>
+        {/* {search} */}
+        <NamedLink className={css.createListingLink} name="NewListingPage">
+          {/* <span className={css.createListing}> */}
+          <span className={css.requestDemo}>
+            {/* <FormattedMessage id="TopbarDesktop.createListing" /> */}
+            <FormattedMessage id="Request a Demo"/>
+          </span>
+        </NamedLink>
+        {inboxLink}
+        {profileMenu}
+        {signupLink}
+        {loginLink}
+      </div>
     </nav>
   );
 };
