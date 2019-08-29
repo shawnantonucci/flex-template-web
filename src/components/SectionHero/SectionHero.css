@@ -97,7 +97,7 @@
   }
 }
 
-.heroButton {
+/* .heroButton {
   @apply --marketplaceButtonStyles;
   @apply --SectionHero_animation;
 
@@ -107,4 +107,16 @@
     display: block;
     width: 260px;
   }
+} */
+
+.inputBar {
+  background-color: white;
+  width: 55%;
+  height: 60px;
+  border-radius: 5px;
+
+}
+
+.inputBar::placeholder {
+  color: red;
 }

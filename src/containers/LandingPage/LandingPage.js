@@ -18,6 +18,7 @@ import {
   Footer,
 } from '../../components';
 import { TopbarContainer } from '../../containers';
+import { Button, Header, Icon, Segment } from 'semantic-ui-react'
 
 import facebookImage from '../../assets/saunatimeFacebook-1200x630.jpg';
 import twitterImage from '../../assets/saunatimeTwitter-600x314.jpg';
