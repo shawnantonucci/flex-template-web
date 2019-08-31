@@ -147,3 +147,19 @@
     height: calc(70vh - var(--topbarHeightDesktop));
   }
 }
+
+.info {
+  /* border: 1px solid red; */
+  height: 325px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info h2 {
+  /* border: 1px solid blue; */
+  width: 75%;
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+}

@@ -62,9 +62,15 @@ export const LandingPageComponent = props => {
           <div className={css.heroContainer}>
             <SectionHero className={css.hero} history={history} location={location} />
           </div>
-            <div className={css.landingBody}>
-
+          <div className={css.landingBody}>
+            <div className={css.info}>
+              <h2>
+                Aeromates has perfected the charter flight <br/>
+                experience, explore our network of
+                flights today.
+              </h2>
             </div>
+          </div>
           {/* <ul className={css.sections}>
             <li className={css.section}>
               <div className={css.sectionContentFirstChild}>
