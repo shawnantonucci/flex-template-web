@@ -18,7 +18,7 @@ import {
   Footer,
 } from '../../components';
 import { TopbarContainer } from '../../containers';
-import { Button, Header, Icon, Segment } from 'semantic-ui-react'
+import { Button, Header, Icon, Segment } from 'semantic-ui-react';
 
 import facebookImage from '../../assets/saunatimeFacebook-1200x630.jpg';
 import twitterImage from '../../assets/saunatimeTwitter-600x314.jpg';
@@ -62,7 +62,10 @@ export const LandingPageComponent = props => {
           <div className={css.heroContainer}>
             <SectionHero className={css.hero} history={history} location={location} />
           </div>
-          <ul className={css.sections}>
+            <div className={css.landingBody}>
+
+            </div>
+          {/* <ul className={css.sections}>
             <li className={css.section}>
               <div className={css.sectionContentFirstChild}>
                 <SectionLocations />
@@ -73,7 +76,7 @@ export const LandingPageComponent = props => {
                 <SectionHowItWorks />
               </div>
             </li>
-          </ul>
+          </ul> */}
         </LayoutWrapperMain>
         <LayoutWrapperFooter>
           <Footer />

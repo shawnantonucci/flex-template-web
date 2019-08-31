@@ -128,3 +128,22 @@
     top: calc(-1 * var(--LandingPage_sectionMarginTopLarge));
   }
 }
+
+.landingBody {
+  height: 800px;
+  background-color: #202024;
+  display: flex;
+  flex-direction: column;
+
+  @media (--viewportMedium) {
+    min-height: 500px;
+    height: 70vh;
+    max-height: none;
+  }
+
+  @media (--viewportLarge) {
+    max-height: 800px;
+    min-height: 600px;
+    height: calc(70vh - var(--topbarHeightDesktop));
+  }
+}
