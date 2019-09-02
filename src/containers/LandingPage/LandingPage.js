@@ -81,6 +81,38 @@ export const LandingPageComponent = props => {
               <div className={css.cardImage}>Miami, FL</div>
               <div className={css.cardImage}>Orlando, FL</div>
             </div>
+            <Button className={css.cardButton} inverted basic color="white">
+              Explore More Destinations
+            </Button>
+            <h2
+              style={{ color: 'white', alignSelf: 'center', fontSize: '40px', marginBottom: '10%' }}
+            >
+              A Premium Charter Experience
+            </h2>
+            <div className={css.swappedContainer}>
+              <div className={css.imgRight}>
+                <div className={css.infoContainer}>
+                  <div>
+                    <h2>
+                      Catering - <br />
+                      Made to Order
+                    </h2>
+                    <p>
+                      Make your flight even better by enjoying your <br />
+                      favorite dishes en route to your final <br />
+                      destination. With Aeromates, you can create <br />a profile of favorite food
+                      and at the click of a <br />
+                      button, enjoy it on your next flight with us.
+                    </p>
+                  </div>
+                  <div className={css.rightImageView}>
+
+                  </div>
+                </div>
+              </div>
+              <div className={css.imgLeft}>2</div>
+              <div className={css.imgRight}>3</div>
+            </div>
           </div>
           {/* <ul className={css.sections}>
             <li className={css.section}>
