@@ -65,10 +65,21 @@ export const LandingPageComponent = props => {
           <div className={css.landingBody}>
             <div className={css.info}>
               <h2>
-                Aeromates has perfected the charter flight <br/>
-                experience, explore our network of
-                flights today.
+                Aeromates has perfected the charter flight <br />
+                experience, explore our network of flights today.
               </h2>
+              <h3 style={{ color: 'white', alignSelf: 'flex-start' }}>Popular Destinations</h3>
+              <p style={{ color: 'white', alignSelf: 'flex-start' }}>
+                Charter a flight to one of our most popular destinations
+              </p>
+            </div>
+            <div className={css.cardImageContainer}>
+              <div className={css.cardImage}>Los Angeles, CA</div>
+              <div className={css.cardImage}>San Diego, CA</div>
+              <div className={css.cardImage}>San Francisco, CA</div>
+              <div className={css.cardImage}>New York, NY</div>
+              <div className={css.cardImage}>Miami, FL</div>
+              <div className={css.cardImage}>Orlando, FL</div>
             </div>
           </div>
           {/* <ul className={css.sections}>
