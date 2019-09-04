@@ -105,13 +105,44 @@ export const LandingPageComponent = props => {
                       button, enjoy it on your next flight with us.
                     </p>
                   </div>
-                  <div className={css.rightImageView}>
-
+                  <div className={css.rightImageView} />
+                </div>
+              </div>
+              <div className={css.imgLeft}>
+                <div className={css.infoContainer}>
+                  <div className={css.leftImageView} />
+                  <div>
+                    <h2>
+                      Door to Door <br/>
+                      Transportation
+                    </h2>
+                    <p>
+                      We'll schedule transportation to meet you to <br />
+                      get you from door to door. Simply let us <br />
+                      know your preffered vendor and we'll do the <br />
+                      rest. On time, and no hassle! <br />
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className={css.imgLeft}>2</div>
-              <div className={css.imgRight}>3</div>
+              <div className={css.imgRight}>
+                <div className={css.infoContainer}>
+                  <div>
+                    <h2>
+                      Flights<br />
+                      On-Demand
+                    </h2>
+                    <p>
+                      Aeromates is innovating the private charter <br />
+                      industry. Our software is tailor made and <br />
+                      here to make repeat bookings on-demand. <br />
+                      Create a dynamic profile that make flying <br />
+                      with us a perfect fit for your schedule. <br />
+                    </p>
+                  </div>
+                  <div className={css.rightImageView} />
+                </div>
+              </div>
             </div>
           </div>
           {/* <ul className={css.sections}>
