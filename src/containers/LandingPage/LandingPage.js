@@ -22,6 +22,7 @@ import { Button, Header, Icon, Segment } from 'semantic-ui-react';
 
 import facebookImage from '../../assets/saunatimeFacebook-1200x630.jpg';
 import twitterImage from '../../assets/saunatimeTwitter-600x314.jpg';
+import sanDiegoImage from '../../assets/San diego from the sky.jpg';
 import css from './LandingPage.css';
 
 export const LandingPageComponent = props => {
@@ -173,7 +174,55 @@ export const LandingPageComponent = props => {
                   <div className={css.rightImageView2} />
                 </div>
               </div>
+              <h3
+                style={{
+                  color: 'white',
+                  alignSelf: 'flex-start',
+                  marginLeft: '12.5%',
+                  fontSize: '23px',
+                }}
+              >
+                Premium Tours
+              </h3>
+              <p
+                style={{
+                  color: 'white',
+                  alignSelf: 'flex-start',
+                  marginLeft: '12.5%',
+                  fontSize: '14px',
+                  fontWeight: '400',
+                }}
+              >
+                Once you arrive at your destination, book a Luxury Tour to take in the sights.
+              </p>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  width: '100%',
+                  justifyContent: 'center',
+                }}
+              >
+                <div style={{ width: '25%' }}>
+                  <img style={{ width: '280px' }} src={sanDiegoImage} alt="san diego flight" />
+                  <h5 style={fontcolor}>San Diego from the Sky</h5>
+                  <p style={fontcolor}>Helicopter Tour - 1 Hour</p>
+                </div>
+
+                <div style={{ width: '25%' }}>
+                  <img style={{ width: '280px' }} src={sanDiegoImage} alt="san diego flight" />
+                  <h5 style={fontcolor}>Top Gun Tour</h5>
+                  <p style={fontcolor}>Helicopter Tour - 1 Hour</p>
+                </div>
+
+                <div style={{ width: '25%' }}>
+                  <img style={{ width: '280px' }} src={sanDiegoImage} alt="san diego flight" />
+                  <h5 style={fontcolor}>Pacific Sunset View</h5>
+                  <p style={fontcolor}>Helicopter Tour - 1 Hour</p>
+                </div>
+              </div>
             </div>
+            <div />
           </div>
           {/* <ul className={css.sections}>
             <li className={css.section}>
@@ -228,3 +277,7 @@ const LandingPage = compose(
 )(LandingPageComponent);
 
 export default LandingPage;
+
+const fontcolor = {
+  color: 'white',
+};
