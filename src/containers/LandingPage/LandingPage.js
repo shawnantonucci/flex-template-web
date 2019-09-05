@@ -64,22 +64,51 @@ export const LandingPageComponent = props => {
           </div>
           <div className={css.landingBody}>
             <div className={css.info}>
-              <h2>
+              <h2 style={{ marginBottom: '7%', marginTop: '7%', marginLeft: '136px' }}>
                 Aeromates has perfected the charter flight <br />
                 experience, explore our network of flights today.
               </h2>
-              <h3 style={{ color: 'white', alignSelf: 'flex-start' }}>Popular Destinations</h3>
-              <p style={{ color: 'white', alignSelf: 'flex-start' }}>
+              <h3
+                style={{
+                  color: 'white',
+                  alignSelf: 'flex-start',
+                  marginLeft: '17.5%',
+                  fontSize: '23px',
+                }}
+              >
+                Popular Destinations
+              </h3>
+              <p
+                style={{
+                  color: 'white',
+                  alignSelf: 'flex-start',
+                  marginLeft: '17.5%',
+                  fontSize: '14px',
+                  fontWeight: '400',
+                }}
+              >
                 Charter a flight to one of our most popular destinations
               </p>
             </div>
             <div className={css.cardImageContainer}>
-              <div className={css.cardImage}>Los Angeles, CA</div>
-              <div className={css.cardImage}>San Diego, CA</div>
-              <div className={css.cardImage}>San Francisco, CA</div>
-              <div className={css.cardImage}>New York, NY</div>
-              <div className={css.cardImage}>Miami, FL</div>
-              <div className={css.cardImage}>Orlando, FL</div>
+              <div className={css.la}>
+                <p>Los Angeles, CA</p>
+              </div>
+              <div className={css.sd}>
+                <p>San Diego, CA</p>
+              </div>
+              <div className={css.sf}>
+                <p>San Francisco, CA</p>
+              </div>
+              <div className={css.ny}>
+                <p>New York, NY</p>
+              </div>
+              <div className={css.mi}>
+                <p>Miami, FL</p>
+              </div>
+              <div className={css.ol}>
+                <p>Orlando, FL</p>
+              </div>
             </div>
             <Button className={css.cardButton} inverted basic color="white">
               Explore More Destinations
@@ -113,7 +142,7 @@ export const LandingPageComponent = props => {
                   <div className={css.leftImageView} />
                   <div>
                     <h2>
-                      Door to Door <br/>
+                      Door to Door <br />
                       Transportation
                     </h2>
                     <p>
@@ -129,7 +158,8 @@ export const LandingPageComponent = props => {
                 <div className={css.infoContainer}>
                   <div>
                     <h2>
-                      Flights<br />
+                      Flights
+                      <br />
                       On-Demand
                     </h2>
                     <p>
@@ -140,7 +170,7 @@ export const LandingPageComponent = props => {
                       with us a perfect fit for your schedule. <br />
                     </p>
                   </div>
-                  <div className={css.rightImageView} />
+                  <div className={css.rightImageView2} />
                 </div>
               </div>
             </div>

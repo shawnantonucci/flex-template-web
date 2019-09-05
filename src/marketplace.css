@@ -25,7 +25,7 @@
     /* background: linear-gradient(-45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
       url('../../assets/background-1440.jpg'); */
     background: linear-gradient(-45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
-      url('../../assets/aircraft.jpeg');
+      url('../../assets/Charter Hero Image.jpg');
 
     /* Add loading color for the div */
     background-color: var(--matterColor);

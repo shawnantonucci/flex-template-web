@@ -151,7 +151,7 @@
   /* border: 1px solid blue; */
   width: 75%;
   color: white;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: bold;
 }
 
@@ -178,6 +178,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
+  padding: 70px;
 }
 
 .cardButton {
@@ -192,17 +193,14 @@
 }
 
 .swappedContainer {
-  border: 1px solid red;
   height: 1800px;
 }
 
 .imgRight {
-  border: 1px solid green;
   height: 525px;
   color: white;
 }
 .imgLeft {
-  border: 1px solid purple;
   color: white;
   height: 525px;
 }
@@ -212,21 +210,129 @@
   justify-content: space-around;
   width: 100%;
   height: 100%;
-  background-color: grey;
-  border: 5px solid yellowgreen;
   padding: 2%;
 }
 
 .rightImageView {
-  width: 560px;
-  height: 420px;
-  border: 1px solid red;
-  background-color: aqua;
+  width: 440px;
+  height: 340px;
+  background-image: url('../../assets/louis-hansel-DRUgO0fF19g-unsplash.jpg');
+  background-size: cover;
 }
 
 .leftImageView {
-  width: 560px;
-  height: 420px;
-  border: 1px solid red;
-  background-color: aqua;
+  width: 582px;
+  height: 389px;
+  background-image: url(/static/media/zoe-holling-PScacPyJE5U-unsplash.38ff355a.jpg);
+  background-size: 65%;
+  background-position-y: center;
+}
+
+.rightImageView2 {
+  width: 440px;
+  height: 340px;
+  background-image: url('../../assets/zoe-holling-PScacPyJE5U-unsplash.jpg');
+  background-size: cover;
+}
+
+.la {
+  background-image: url(/static/media/IMG_4854.478ff48d.jpg);
+  width: 26%;
+  margin: auto;
+  height: 400px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  background-size: 263% 100%;
+  background-position-x: center;
+}
+
+.sd {
+  background-image: url('../../assets/daniel-guerra-RQF6bbS4shw-unsplash.jpg');
+  width: 26%;
+  margin: auto;
+  height: 400px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  background-size: 263% 100%;
+  background-position-x: center;
+}
+
+.sf {
+  background-image: url('../../assets/tim-foster-o4mP43oPGHk-unsplash.jpg');
+  width: 26%;
+  margin: auto;
+  height: 400px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  background-size: 263% 100%;
+  background-position-x: center;
+}
+
+.ny {
+  background-image: url('../../assets/oliver-niblett-wh-7GeXxItI-unsplash.jpg');
+  width: 26%;
+  margin: auto;
+  height: 400px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  background-size: 263% 100%;
+  background-position-x: center;
+}
+
+.mi {
+  background-image: url('../../assets/raphael-nogueira-JMYBetGDIKY-unsplash.jpg');
+  width: 26%;
+  margin: auto;
+  height: 400px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  background-size: 263% 100%;
+  background-position-x: center;
+}
+
+.ol {
+  background-image: url('../../assets/amy-humphries-moOMLIZlUaM-unsplash.jpg');
+  width: 26%;
+  margin: auto;
+  height: 400px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  background-size: 263% 100%;
+  background-position-x: center;
 }
