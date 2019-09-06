@@ -221,7 +221,7 @@
 }
 
 .leftImageView {
-  width: 582px;
+  width: 658px;
   height: 389px;
   background-image: url(/static/media/zoe-holling-PScacPyJE5U-unsplash.38ff355a.jpg);
   background-size: 65%;
@@ -231,12 +231,13 @@
 .rightImageView2 {
   width: 440px;
   height: 340px;
-  background-image: url('../../assets/zoe-holling-PScacPyJE5U-unsplash.jpg');
+  /* background-image: url(); */
+  background-color: red;
   background-size: cover;
 }
 
 .la {
-  background-image: url(/static/media/IMG_4854.478ff48d.jpg);
+  background-image: url('../../assets/daniil-vnoutchkov-oF24WeAA4Ec-unsplash.jpg');
   width: 26%;
   margin: auto;
   height: 400px;
@@ -250,6 +251,8 @@
   border-radius: 6px;
   background-size: 263% 100%;
   background-position-x: center;
+  max-width: 23%;
+  margin-right: 3%;
 }
 
 .sd {
@@ -267,6 +270,8 @@
   border-radius: 6px;
   background-size: 263% 100%;
   background-position-x: center;
+  max-width: 23%;
+  margin-right: 3%;
 }
 
 .sf {
@@ -284,6 +289,8 @@
   border-radius: 6px;
   background-size: 263% 100%;
   background-position-x: center;
+  max-width: 23%;
+  margin-right: 3%;
 }
 
 .ny {
@@ -301,6 +308,8 @@
   border-radius: 6px;
   background-size: 263% 100%;
   background-position-x: center;
+  max-width: 23%;
+  margin-right: 3%;
 }
 
 .mi {
@@ -318,6 +327,8 @@
   border-radius: 6px;
   background-size: 263% 100%;
   background-position-x: center;
+  max-width: 23%;
+  margin-right: 3%;
 }
 
 .ol {
@@ -335,4 +346,87 @@
   border-radius: 6px;
   background-size: 263% 100%;
   background-position-x: center;
+  max-width: 22%;
+  margin-right: 3%;
+}
+
+.placeBtn {
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  width: 18%;
+  height: 60px;
+  align-self: center;
+  margin-top: 2% !important;
+  margin-bottom: 12% !important;
+  white-space: nowrap;
+}
+
+.panelImages {
+  font-size: 18px;
+  color: white;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.panelInfo {
+  color: white;
+  font-size: 14px;
+}
+
+.popLocations {
+  color: white;
+  align-self: flex-start;
+  margin-left: 17%;
+  font-size: 23px;
+}
+
+.popLocationsInfo {
+  color: white;
+  align-self: flex-start;
+  margin-left: 17%;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.premTours {
+  color: white;
+  align-self: flex-start;
+  margin-left: 12.5%;
+  font-size: 23px;
+}
+
+.premToursInfo {
+  color: white;
+  align-self: flex-start;
+  margin-left: 12.5%;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.premContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 210px;
+}
+
+.planeFooter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.aeromatesFooterImg {
+  color: #1f1f1f;
+  width: 40%;
+  z-index: 1;
+  align-self: center;
+}
+
+.aeromatesFooterPlaneImg {
+  width: 100%;
+  margin-top: -10%;
+  margin-bottom: -26%;
 }

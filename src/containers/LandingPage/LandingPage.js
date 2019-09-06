@@ -23,6 +23,8 @@ import { Button, Header, Icon, Segment } from 'semantic-ui-react';
 import facebookImage from '../../assets/saunatimeFacebook-1200x630.jpg';
 import twitterImage from '../../assets/saunatimeTwitter-600x314.jpg';
 import sanDiegoImage from '../../assets/San diego from the sky.jpg';
+import aeromatesFooter from '../../assets/aeromates.png';
+import aeromatesFooterPlane from '../../assets/osman-rana-n61ur6rT_F8-unsplash.jpg';
 import css from './LandingPage.css';
 
 export const LandingPageComponent = props => {
@@ -69,25 +71,8 @@ export const LandingPageComponent = props => {
                 Aeromates has perfected the charter flight <br />
                 experience, explore our network of flights today.
               </h2>
-              <h3
-                style={{
-                  color: 'white',
-                  alignSelf: 'flex-start',
-                  marginLeft: '17.5%',
-                  fontSize: '23px',
-                }}
-              >
-                Popular Destinations
-              </h3>
-              <p
-                style={{
-                  color: 'white',
-                  alignSelf: 'flex-start',
-                  marginLeft: '17.5%',
-                  fontSize: '14px',
-                  fontWeight: '400',
-                }}
-              >
+              <h3 className={css.popLocations}>Popular Destinations</h3>
+              <p className={css.popLocationsInfo}>
                 Charter a flight to one of our most popular destinations
               </p>
             </div>
@@ -111,7 +96,7 @@ export const LandingPageComponent = props => {
                 <p>Orlando, FL</p>
               </div>
             </div>
-            <Button className={css.cardButton} inverted basic color="white">
+            <Button className={css.placeBtn} inverted basic color="white">
               Explore More Destinations
             </Button>
             <h2
@@ -174,52 +159,44 @@ export const LandingPageComponent = props => {
                   <div className={css.rightImageView2} />
                 </div>
               </div>
-              <h3
-                style={{
-                  color: 'white',
-                  alignSelf: 'flex-start',
-                  marginLeft: '12.5%',
-                  fontSize: '23px',
-                }}
-              >
-                Premium Tours
-              </h3>
-              <p
-                style={{
-                  color: 'white',
-                  alignSelf: 'flex-start',
-                  marginLeft: '12.5%',
-                  fontSize: '14px',
-                  fontWeight: '400',
-                }}
-              >
+              <h3 className={css.premTours}>Premium Tours</h3>
+              <p className={css.premToursInfo}>
                 Once you arrive at your destination, book a Luxury Tour to take in the sights.
               </p>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  width: '100%',
-                  justifyContent: 'center',
-                }}
-              >
+              <div className={css.premContainer}>
                 <div style={{ width: '25%' }}>
-                  <img style={{ width: '280px' }} src={sanDiegoImage} alt="san diego flight" />
-                  <h5 style={fontcolor}>San Diego from the Sky</h5>
-                  <p style={fontcolor}>Helicopter Tour - 1 Hour</p>
+                  <img className={css.panelImages} src={sanDiegoImage} alt="san diego flight" />
+                  <h5>San Diego from the Sky</h5>
+                  <p className={css.panelInfo}>Helicopter Tour - 1 Hour</p>
                 </div>
 
                 <div style={{ width: '25%' }}>
-                  <img style={{ width: '280px' }} src={sanDiegoImage} alt="san diego flight" />
-                  <h5 style={fontcolor}>Top Gun Tour</h5>
-                  <p style={fontcolor}>Helicopter Tour - 1 Hour</p>
+                  <img className={css.panelImages} src={sanDiegoImage} alt="san diego flight" />
+                  <h5>Top Gun Tour</h5>
+                  <p className={css.panelInfo}>Helicopter Tour - 1 Hour</p>
                 </div>
 
                 <div style={{ width: '25%' }}>
-                  <img style={{ width: '280px' }} src={sanDiegoImage} alt="san diego flight" />
-                  <h5 style={fontcolor}>Pacific Sunset View</h5>
-                  <p style={fontcolor}>Helicopter Tour - 1 Hour</p>
+                  <img className={css.panelImages} src={sanDiegoImage} alt="san diego flight" />
+                  <h5>Pacific Sunset View</h5>
+                  <p className={css.panelInfo}>Helicopter Tour - 1 Hour</p>
                 </div>
+              </div>
+              <div className={css.planeFooter}>
+                <img
+                  className={css.aeromatesFooterImg}
+                  src={aeromatesFooter}
+                  alt="aeromates logo"
+                />
+                <img
+                  className={css.aeromatesFooterPlaneImg}
+                  src={aeromatesFooterPlane}
+                  alt="plane in footer"
+                />
+
+                <Button className={css.cardButton} inverted basic color="white">
+                  Book a Charter Flight
+                </Button>
               </div>
             </div>
             <div />
